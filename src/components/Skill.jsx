@@ -56,7 +56,7 @@ function Skills() {
             }}
         >
             <div className="container">
-                <h2 className="section-title">Skills & Technologies</h2>
+                <h2 className="section-title">Skills & TechStack</h2>
                 <p className="section-sub">
                     A comprehensive overview of my technical skills and proficiency
                 </p>

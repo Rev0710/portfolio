@@ -27,7 +27,7 @@ function Projects() {
             title: "Portfolio Website",
             desc: "Personal portfolio with React",
             img: "/portfolio.jpg",
-            link: "https://www.figma.com/file/XXXX/UI-Challenge"
+            link: "https://portfolio-mu-self-49.vercel.app/"
         }
 
     ]
