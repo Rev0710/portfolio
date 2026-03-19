@@ -1,22 +1,34 @@
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 function CursorGlow() {
+    const glowRef = useRef(null)
 
     useEffect(() => {
+        const moveGlow = (x, y) => {
+            if (glowRef.current) {
+                glowRef.current.style.transform = `translate(${x}px, ${y}px)`
+            }
+        }
 
-        const glow = document.querySelector(".cursor-glow")
+        const handleMouseMove = (e) => {
+            moveGlow(e.clientX, e.clientY)
+        }
 
-        document.addEventListener("mousemove", (e) => {
+        const handleTouchMove = (e) => {
+            const touch = e.touches[0]
+            moveGlow(touch.clientX, touch.clientY)
+        }
 
-            glow.style.left = e.pageX + "px"
-            glow.style.top = e.pageY + "px"
+        window.addEventListener("mousemove", handleMouseMove)
+        window.addEventListener("touchmove", handleTouchMove)
 
-        })
-
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove)
+            window.removeEventListener("touchmove", handleTouchMove)
+        }
     }, [])
 
-    return <div className="cursor-glow"></div>
-
+    return <div ref={glowRef} className="cursor-glow"></div>
 }
 
 export default CursorGlow

@@ -162,7 +162,9 @@ body.light {
 }
 
 .name {
-  color: #1e32ca;
+
+  color: #19035b;
+
 }
 
 .typing-text {
@@ -1895,40 +1897,28 @@ body.dark {
 /* PROFILE IMAGE */
 
 .profile-img {
-  width: auto;
-  height: 50vh;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #6366f1;
-
-  box-shadow:
-    0 0 20px #6366f1,
-    0 0 40px #9333ea;
-
-  animation: floatImage 5s ease-in-out infinite, fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  width: 100vh;
+  position: relative;
+  z-index: 2;
 }
 
 /* ORBIT RING */
 
 .orbit-ring {
+
   position: absolute;
+
   width: 350px;
   height: 350px;
+
   border-radius: 50%;
 
-  animation: rotateOrbit 20s linear infinite;
+  animation: rotateOrbit 18s linear infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* ORBIT ICON */
@@ -2613,45 +2603,4 @@ body {
     opacity: 0;
     transform: scale(1.1);
   }
-}
-
-.hero {
-  animation: fadeHero 1s ease;
-}
-
-@keyframes fadeHero {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.hero {
-  animation: fadeHero 1s ease;
-}
-
-@keyframes fadeHero {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.btn {
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }
