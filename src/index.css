@@ -2292,3 +2292,293 @@ body {
     width: 100%;
   }
 }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background: #0f172a;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+}
+
+/* TEXT */
+.loader-text {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* BAR */
+.loader-bar {
+  width: 250px;
+  height: 8px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* FILL */
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  transition: width 0.2s;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: #0f172a;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+/* FADE OUT */
+.loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* TEXT */
+.loader-text {
+  font-size: 32px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: pulseText 1.5s infinite;
+}
+
+/* TEXT PULSE */
+@keyframes pulseText {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* BAR */
+.loader-bar {
+  width: 260px;
+  height: 8px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* FILL */
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  box-shadow: 0 0 10px #6366f1, 0 0 20px #9333ea;
+  transition: width 0.2s ease;
+}
+
+/* BACKGROUND CONTAINER */
+.loader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* BLOBS (3D FEEL) */
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: moveBlob 12s infinite alternate ease-in-out;
+}
+
+/* DIFFERENT POSITIONS */
+.blob1 {
+  top: -100px;
+  left: -100px;
+}
+
+.blob2 {
+  bottom: -120px;
+  right: -80px;
+  animation-delay: 3s;
+}
+
+.blob3 {
+  top: 40%;
+  left: 60%;
+  animation-delay: 6s;
+}
+
+/* FLOATING ANIMATION */
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(80px, 60px) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-60px, 100px) scale(1);
+  }
+}
+
+/* LOADER FULL SCREEN */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* CENTER CONTENT */
+.loader-content {
+  text-align: center;
+  z-index: 2;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* TITLE */
+.loader-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* PROGRESS BAR */
+.loader-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #9333ea);
+  transition: width 0.2s ease;
+}
+
+/* PERCENT */
+.loader-percent {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ===== 3D BACKGROUND ===== */
+.loader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* BLOBS */
+.loader-bg .blob {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #6366f1, #9333ea);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: moveBlob 12s infinite alternate ease-in-out;
+}
+
+/* POSITIONS */
+.b1 {
+  top: 10%;
+  left: 10%;
+}
+
+.b2 {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.b3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 4s;
+}
+
+/* ANIMATION */
+@keyframes moveBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(50px, -50px) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50px, 50px) scale(1);
+  }
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+  .loader-title {
+    font-size: 1.5rem;
+  }
+
+  .loader-bar {
+    height: 6px;
+  }
+
+  .loader-percent {
+    font-size: 12px;
+  }
+
+  .loader-bg .blob {
+    width: 180px;
+    height: 180px;
+    filter: blur(80px);
+  }
+}
