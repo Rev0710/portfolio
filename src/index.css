@@ -2225,3 +2225,70 @@ body.dark {
   }
 
 }
+
+/* Mobile menu adjustments */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    /* just below navbar */
+    right: 0;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    /* fit content */
+    padding: 10px 20px;
+    /* minimal padding around links */
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0 20px 20px 0;
+    /* optional: rounded edges */
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    padding: 8px 0;
+    /* tight vertical padding per link */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* NAVBAR FIXED ALWAYS */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  /* keep on top always */
+}
+
+/* Prevent content from going under navbar */
+body {
+  padding-top: 80px;
+  /* adjust based on your navbar height */
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* prevent sideways movement */
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
