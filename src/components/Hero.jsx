@@ -6,6 +6,7 @@ import { SiMongodb } from "react-icons/si"
 
 function Hero() {
 
+
     return (
 
         <section className="hero">

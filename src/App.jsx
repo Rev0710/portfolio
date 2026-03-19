@@ -15,7 +15,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2500)
     AOS.init({
       duration: 1000,
       once: true,
