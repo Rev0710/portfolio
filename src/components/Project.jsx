@@ -21,19 +21,12 @@ function Projects() {
             desc: "Precision Gaming at Your Fingertips built with React",
             img: "/hyperx.png",
             link: "https://hyperx-mouse.vercel.app/"
-        },
-
-        {
-            title: "Portfolio Website",
-            desc: "Personal portfolio with React",
-            img: "/portfolio.jpg",
-            link: "https://portfolio-mu-self-49.vercel.app/"
         }
 
     ]
 
     return (
-        <section id="projects" className="projects-section">
+        <section id="projects" className="projects-section" data-aos="fade-up">
 
             <h2 className="section-title">Features Projects</h2>
 

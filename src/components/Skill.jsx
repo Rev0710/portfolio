@@ -49,7 +49,7 @@ function Skills() {
 
     return (
         <section
-            id="skills"
+            id="skills" data-aos="fade-up"
             className="skills-section"
             style={{
                 background: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, #1e1e2f, #0d0d1a)`

@@ -4,7 +4,7 @@ function Contact() {
 
     return (
 
-        <section id="contact" className="contact-section">
+        <section id="contact" className="contact-section" data-aos="fade-up">
 
             <div className="contact-container">
 

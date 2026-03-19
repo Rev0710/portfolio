@@ -37,7 +37,7 @@ function Loader({ onFinish }) {
 
             {/* CONTENT */}
             <div className="loader-content">
-                <h1 className="loader-title">John Rev</h1>
+                <h1 className="loader-title">John Rev Dela Rosa</h1>
 
                 <div className="loader-bar">
                     <div
