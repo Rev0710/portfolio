@@ -21,6 +21,14 @@ function Projects() {
             desc: "Precision Gaming at Your Fingertips built with React",
             img: "/hyperx.png",
             link: "https://hyperx-mouse.vercel.app/"
+        },
+
+        {
+         
+            title: "DocLock",
+            desc: "Fast to press, no more stress! built with React",
+            img: "/Doclock.png",
+            link: "https://doclock.vercel.app/"
         }
 
     ]
