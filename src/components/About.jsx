@@ -43,7 +43,7 @@ function About() {
                 <h2>About Me</h2>
 
                 <p className="about-text">
-                    I am a passionate <span className="highlight">Full Stack Developer</span> specializing in the <span className="highlight">MERN stack</span> (MongoDB, Express.js, React, Node.js). I love building modern, responsive, and scalable websites that provide great user experiences.
+                    I am a Dedicated <span className="highlight">Full Stack Developer</span> when it comes in <span className="highlight">MERN stack</span> (MongoDB, Express.js, React, Node.js). I love building modern, responsive, and scalable websites that provide great user experiences.
                 </p>
 
                 <p className="about-text">
