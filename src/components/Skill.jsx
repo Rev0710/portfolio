@@ -15,29 +15,29 @@ import {
     SiVercel,
     SiRender
 } from "react-icons/si"
-
 function Skills() {
     const frontend = [
-        { name: "HTML", icon: <FaHtml5 style={{ color: "#E34F26" }} />, level: 85 },
-        { name: "CSS", icon: <FaCss3Alt style={{ color: "#1572B6" }} />, level: 80 },
-        { name: "JavaScript", icon: <FaJs style={{ color: "#F7DF1E" }} />, level: 85 },
-        { name: "React.js", icon: <FaReact style={{ color: "#61DAFB" }} />, level: 87 }
-    ]
+        { name: "HTML", icon: <FaHtml5 style={{ color: "#E34F26" }} /> },
+        { name: "CSS", icon: <FaCss3Alt style={{ color: "#1572B6" }} /> },
+        { name: "JavaScript", icon: <FaJs style={{ color: "#F7DF1E" }} /> },
+        { name: "React.js", icon: <FaReact style={{ color: "#61DAFB" }} /> }
+    ];
 
     const backend = [
-        { name: "Node.js", icon: <FaNodeJs style={{ color: "#339933" }} />, level: 90 },
-        { name: "Express.js", icon: <SiExpress style={{ color: "#000000" }} />, level: 90 },
-        { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} />, level: 85 }
-    ]
+        { name: "Node.js", icon: <FaNodeJs style={{ color: "#339933" }} /> },
+        { name: "Express.js", icon: <SiExpress style={{ color: "#000000" }} /> },
+        { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} /> }
+    ];
 
     const tools = [
-        { name: "Git", icon: <FaGitAlt style={{ color: "#F05032" }} />, level: 85 },
-        { name: "GitHub", icon: <FaGithub style={{ color: "#FFFFFF" }} />, level: 90 },
-        { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} />, level: 90 },
-        { name: "Render", icon: <SiRender style={{ color: "#4A4A4A" }} />, level: 90 },
-        { name: "Vite", icon: <SiVite style={{ color: "#646CFF" }} />, level: 95 }
-    ]
+        { name: "Git", icon: <FaGitAlt style={{ color: "#F05032" }} /> },
+        { name: "GitHub", icon: <FaGithub style={{ color: "#FFFFFF" }} /> },
+        { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} /> },
+        { name: "Render", icon: <SiRender style={{ color: "#4A4A4A" }} /> },
+        { name: "Vite", icon: <SiVite style={{ color: "#646CFF" }} /> }
+    ];
 
+    // Rest of your component logic...
 
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
