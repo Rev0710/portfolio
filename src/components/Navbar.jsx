@@ -57,7 +57,7 @@ function Navbar() {
                 </Link>
             </div>
 
-            {/* Theme + Hamburger */}
+            {/* Right controls: Theme + Hamburger */}
             <div className="nav-controls">
                 <button className="theme-toggle" onClick={toggleTheme}>
                     {dark ? <FaSun /> : <FaMoon />}

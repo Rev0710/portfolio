@@ -32,7 +32,7 @@ function ParticlesBG() {
             events: {
                 onHover: {
                     enable: true,
-                    mode: "attract",
+                    mode: "attract", // particles follow the cursor
                 },
                 onClick: { enable: true, mode: "push" },
             },
