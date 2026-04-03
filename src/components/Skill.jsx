@@ -37,8 +37,6 @@ function Skills() {
         { name: "Vite", icon: <SiVite style={{ color: "#646CFF" }} /> }
     ];
 
-    // Rest of your component logic...
-
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
     useEffect(() => {
