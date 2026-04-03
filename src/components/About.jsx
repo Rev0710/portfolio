@@ -20,10 +20,10 @@ function About() {
 
     return (
         <section id="about" className="about-section" data-aos="fade-up">
-            /* Animated Gradient Blob */
+            {/* Animated Gradient Blob */}
             <div className="about-blob"></div>
 
-            /* Floating tech icons */
+           { /* Floating tech icons */}
             <div className="floating-icons">
                 <FaHtml5 className="icon html" />
                 <FaCss3Alt className="icon css" />
