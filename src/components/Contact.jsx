@@ -40,7 +40,7 @@ function Contact() {
 
                 </form>
 
-                {/* SOCIAL LINKS */}
+                /* SOCIAL LINKS */
 
                 <div className="contact-socials">
 
