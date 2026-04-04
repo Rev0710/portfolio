@@ -8,7 +8,6 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [dark, setDark] = useState(true);
 
-    // Init AOS and scroll listener
     useEffect(() => {
         Aos.init({ duration: 1000 });
         document.body.classList.add(dark ? "dark" : "light");

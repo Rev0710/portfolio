@@ -15,19 +15,20 @@ import {
     SiVercel,
     SiRender
 } from "react-icons/si"
+
 function Skills() {
     const frontend = [
         { name: "HTML", icon: <FaHtml5 style={{ color: "#E34F26" }} /> },
         { name: "CSS", icon: <FaCss3Alt style={{ color: "#1572B6" }} /> },
         { name: "JavaScript", icon: <FaJs style={{ color: "#F7DF1E" }} /> },
         { name: "React.js", icon: <FaReact style={{ color: "#61DAFB" }} /> }
-    ];
+    ]
 
     const backend = [
         { name: "Node.js", icon: <FaNodeJs style={{ color: "#339933" }} /> },
         { name: "Express.js", icon: <SiExpress style={{ color: "#000000" }} /> },
         { name: "MongoDB", icon: <SiMongodb style={{ color: "#47A248" }} /> }
-    ];
+    ]
 
     const tools = [
         { name: "Git", icon: <FaGitAlt style={{ color: "#F05032" }} /> },
@@ -35,7 +36,7 @@ function Skills() {
         { name: "Vercel", icon: <SiVercel style={{ color: "#000000" }} /> },
         { name: "Render", icon: <SiRender style={{ color: "#4A4A4A" }} /> },
         { name: "Vite", icon: <SiVite style={{ color: "#646CFF" }} /> }
-    ];
+    ]
 
     // Rest of your component logic...
 
@@ -70,7 +71,6 @@ function Skills() {
                                     <div className="skill-info">
                                         <span className="icon">{skill.icon}</span>
                                         <span>{skill.name}</span>
-                                        <span className="skill-percent">{skill.level}%</span>
                                     </div>
                                     <div className="progress">
                                         <div
