@@ -13,7 +13,7 @@ function Navbar() {
         document.body.classList.add(dark ? "dark" : "light");
 
         const handleScroll = () => {
-            if (menuOpen) setMenuOpen(false); // auto-close menu on scroll
+            if (menuOpen) setMenuOpen(false);
         };
 
 
@@ -55,8 +55,6 @@ function Navbar() {
                     Contact
                 </Link>
             </div>
-
-            {/* Right controls: Theme + Hamburger */}
             <div className="nav-controls">
                 <button className="theme-toggle" onClick={toggleTheme}>
                     {dark ? <FaSun /> : <FaMoon />}

@@ -9,11 +9,7 @@ function Loader({ onFinish }) {
             setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval)
-
-                    // trigger exit animation
-                    setExit(true)
-
-                    // wait animation before removing loader
+                    setExit(true)=
                     setTimeout(() => onFinish(), 800)
 
                     return 100
@@ -27,15 +23,11 @@ function Loader({ onFinish }) {
 
     return (
         <div className={`loader ${exit ? "fade-out" : ""}`}>
-
-            {/* 3D BACKGROUND */}
             <div className="loader-bg">
                 <span className="blob b1"></span>
                 <span className="blob b2"></span>
                 <span className="blob b3"></span>
             </div>
-
-            {/* CONTENT */}
             <div className="loader-content">
                 <h1 className="loader-title">John Rev Dela Rosa</h1>
 

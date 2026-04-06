@@ -15,8 +15,6 @@ function Hero() {
 
             <div className="hero-container">
 
-                {/* LEFT SIDE */}
-
                 <div className="hero-text">
 
                     <h1>Hello, I'm <br /><span className="name">John Rev Dela Rosa</span></h1>
@@ -55,8 +53,6 @@ function Hero() {
 
                     </div>
 
-                    {/* SOCIAL ICONS */}
-
                     <div className="hero-socials">
 
                         <a href="https://github.com/Rev0710">
@@ -75,9 +71,6 @@ function Hero() {
 
                 </div>
 
-
-                {/* RIGHT SIDE */}
-
                 <div className="hero-image">
 
                     <Tilt
@@ -90,8 +83,6 @@ function Hero() {
                         <img src="/profile.png" alt="profile" className="profile-img" />
                     </Tilt>
 
-                    {/* ORBIT RING */}
-
                     <div className="orbit-ring">
 
                         <FaReact className="orbit-icon react" />
@@ -100,8 +91,6 @@ function Hero() {
                         <SiMongodb className="orbit-icon mongo" />
 
                     </div>
-
-                    {/* FLOATING EXPERIENCE */}
 
                     <div className="experience experience-1">
                         <h3>1+</h3>

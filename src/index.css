@@ -2367,13 +2367,11 @@ body {
   letter-spacing: 1px;
 
   background: linear-gradient(90deg, #6366f1, #9333ea);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   animation: pulseText 1.5s infinite;
 }
 
-/* TEXT PULSE */
 @keyframes pulseText {
   0% {
     opacity: 0.6;
