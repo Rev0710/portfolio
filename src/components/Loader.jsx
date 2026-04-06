@@ -9,8 +9,10 @@ function Loader({ onFinish }) {
             setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval)
-                    setExit(true)=
-                    setTimeout(() => onFinish(), 800)
+                    setExit(true)
+                    setTimeout(() => {
+                        if (onFinish) onFinish()
+                    }, 800)
 
                     return 100
                 }
@@ -19,7 +21,7 @@ function Loader({ onFinish }) {
         }, 18)
 
         return () => clearInterval(interval)
-    }, [])
+    }, [onFinish])
 
     return (
         <div className={`loader ${exit ? "fade-out" : ""}`}>
