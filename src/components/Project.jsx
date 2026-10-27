@@ -31,6 +31,7 @@ const featuredProjects = [
     approach: "The team documents student registration and identity steps, Electoral Board election workflows, and admin oversight in one web application.",
     role: "Six-person project team",
     status: "Development demo · Kiosk and end-to-end testing remain in progress",
+
     image: "/projects/votara-logo.png",
     imageAlt: "Votara logo",
     video: "/projects/votara-intro.mp4",
