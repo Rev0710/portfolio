@@ -1,115 +1,73 @@
-import { Typewriter } from "react-simple-typewriter"
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa"
-import Tilt from "react-parallax-tilt"
-import { FaReact, FaJs, FaNodeJs } from "react-icons/fa"
-import { SiMongodb } from "react-icons/si"
+const HEADLINE_LINES = ["Websites application", "built for real needs."];
 
-function Hero() {
-
+function splitLine(line, lineIndex, characterOffset) {
+  return Array.from(line).map((character, index) => {
+    const wordsBefore = line.slice(0, index).trim().split(/\s+/).filter(Boolean);
+    const wordIndex = character === " " ? Math.max(0, wordsBefore.length - 1) : wordsBefore.length;
+    const globalIndex = characterOffset + index;
 
     return (
-
-        <section className="hero">
-
-            <div className="blob"></div>
-
-            <div className="hero-container">
-
-                <div className="hero-text">
-
-                    <h1>Hello, I'm <br /><span className="name">John Rev Dela Rosa</span></h1>
-
-                    <h2 className="typing-text">
-
-                        <Typewriter
-                            words={[
-                                "Backend Developer",
-                                "Full Stack Developer",
-                                "MERN Stack Developer"
-                            ]}
-                            loop={true}
-                            cursor
-                            cursorStyle="|"
-                            typeSpeed={70}
-                            deleteSpeed={50}
-                            delaySpeed={1500}
-                        />
-
-                    </h2>
-
-                    <p className="hero-desc">
-                        A 2nd-year IT student driven by curiosity, innovation, and the goal of creating meaningful digital experiences.
-                    </p>
-
-                    <div className="hero-buttons">
-
-                        <a href="#projects" className="btn">
-                            View Projects
-                        </a>
-
-                        <a href="/cv.pdf" className="btn btn-outline">
-                            Download CV
-                        </a>
-
-                    </div>
-
-                    <div className="hero-socials">
-
-                        <a href="https://github.com/Rev0710">
-                            <FaGithub />
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/john-rev-dela-rosa-056483372">
-                            <FaLinkedin />
-                        </a>
-
-                        <a href="https://www.facebook.com/delarosajohnrev">
-                            <FaFacebook />
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div className="hero-image">
-
-                    <Tilt
-                        tiltMaxAngleX={15}
-                        tiltMaxAngleY={15}
-                        perspective={1000}
-                        scale={1.05}
-                        transitionSpeed={1000}
-                    >
-                        <img src="/profile.png" alt="profile" className="profile-img" />
-                    </Tilt>
-
-                    <div className="orbit-ring">
-
-                        <FaReact className="orbit-icon react" />
-                        <FaJs className="orbit-icon js" />
-                        <FaNodeJs className="orbit-icon node" />
-                        <SiMongodb className="orbit-icon mongo" />
-
-                    </div>
-
-                    <div className="experience experience-1">
-                        <h3>1+</h3>
-                        <p>Years Experience</p>
-                    </div>
-
-                    <div className="experience experience-2">
-                        <h3>3+</h3>
-                        <p>Projects Built</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    )
-
+      <span
+        className="hero-char"
+        data-line={lineIndex}
+        data-word={wordIndex}
+        data-char={index}
+        style={{ "--char-index": globalIndex }}
+        key={lineIndex + "-" + index}
+      >
+        {character === " " ? "\u00A0" : character}
+      </span>
+    );
+  });
 }
 
-export default Hero
+function Hero() {
+  const headline = HEADLINE_LINES.map((line, index) => {
+    const characterOffset = HEADLINE_LINES
+      .slice(0, index)
+      .reduce((total, previousLine) => total + Array.from(previousLine).length, 0);
+    const chars = splitLine(line, index, characterOffset);
+
+    return (
+      <span className="hero-line" data-line={index} key={line}>
+        {chars}
+        {index === HEADLINE_LINES.length - 1 && (
+          <span className="hero-dots" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        )}
+      </span>
+    );
+  });
+
+  return (
+    <section className="hero" id="hero" aria-labelledby="hero-title">
+      <div className="hero__inner">
+        <p className="hero__intro">John Rev Dela Rosa <span aria-hidden="true">·</span> Full-stack developer</p>
+
+        <h1 className="hero__name" id="hero-title" aria-label={HEADLINE_LINES.join(" ")}>
+          <span className="hero__name-visual" aria-hidden="true">{headline}</span>
+        </h1>
+
+        <div className="hero__bottom">
+          <p className="hero__summary">
+            I’m a third-year IT student building responsive websites that can make you're daily life get easier
+            with React, Node.js, Express, and Supabase.
+          </p>
+          <div className="hero__actions">
+            <a className="button button--primary" href="#contact">
+              Let’s build your project <span aria-hidden="true">↗</span>
+            </a>
+            <a className="button button--quiet" href="#projects">
+              Explore my work <span aria-hidden="true">↘</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

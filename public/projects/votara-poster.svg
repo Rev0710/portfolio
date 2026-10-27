@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#0845ff" />
+  <defs>
+    <filter id="white-mark" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#ffffff" result="white" />
+      <feComposite in="white" in2="SourceAlpha" operator="in" />
+    </filter>
+  </defs>
+  <image href="/projects/votara-logo.png" x="520" y="320" width="560" height="560" preserveAspectRatio="xMidYMid meet" filter="url(#white-mark)" />
+</svg>

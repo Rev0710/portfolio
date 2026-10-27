@@ -1,16 +1,30 @@
-# React + Vite
+# John Rev Dela Rosa — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and Vite portfolio for presenting selected web projects, development services, and a clear project inquiry path.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+    npm install
+    npm run dev
 
-## React Compiler
+Create a production build with npm run build. Run source lint with npx eslint src.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Contact form
 
-## Expanding the ESLint configuration
+The form uses EmailJS when the service, template, and public key are configured in a local .env.local file:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+~~~env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+~~~
+
+The EmailJS template should use these parameters: from_name, reply_to, email, project_type, budget, and message. The form includes native field validation, a honeypot field, and an EmailJS per-browser rate limit. When the service is not configured, submitting opens an email draft addressed to the portfolio contact email.
+
+The EmailJS public key is intended for client-side use. Restrict allowed origins and configure abuse controls in the EmailJS dashboard before enabling direct sending on a public deployment.
+
+## Portfolio content
+
+- Featured case studies: CareTrail and Votara
+- Additional projects: AwesomeTodos, Music Player, HyperX Mouse, and DocLock
+- Dark and light themes, responsive navigation, reduced-motion support, and a downloadable CV

@@ -11,7 +11,7 @@ function ParticlesBG() {
         particles: {
             number: { value: 80 },
             density: { enable: true, area: 800 },
-            color: { value: ["#6366f1", "#9333ea", "#06b6d4"] },
+            color: { value: ["#a6d8c3", "#f2f4f1", "#66756e"] },
             links: {
                 enable: true,
                 distance: 150,
