@@ -50,6 +50,15 @@ const featuredProjects = [
 
 const otherProjects = [
   {
+    title: "TaskTracker",
+    type: "Student study workspace",
+    description: "A calmer place to keep tasks, practicals, quizzes, and scores together.",
+    image: "/projects/tasktracker-preview.svg",
+    demo: "https://my-project-tasktracker.vercel.app/",
+    source: null,
+    stack: null,
+  },
+  {
     title: "AwesomeTodos",
     type: "Task manager",
     description: "A MERN task manager for organizing day-to-day work.",
@@ -215,11 +224,11 @@ function Projects() {
                     <span>{project.type}</span>
                   </div>
                   <p>{project.description}</p>
-                  <span className="other-project__stack">{project.stack}</span>
+                  {project.stack && <span className="other-project__stack">{project.stack}</span>}
                 </div>
                 <div className="other-project__links">
                   <a href={project.demo} target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↗</span></a>
-                  <a href={project.source} target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+                  {project.source && <a href={project.source} target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>}
                 </div>
               </article>
             ))}
